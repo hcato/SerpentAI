@@ -530,7 +530,7 @@ def generate_game_plugin():
     #Raise Exception if the game name entered contains a space character.      
     if " " in game_name:
         raise Exception("Game name cannot contain spaces.")
-          
+           
     if game_name in [None, ""]:
         raise Exception("Invalid game name.")
 
@@ -552,7 +552,10 @@ def generate_game_agent_plugin():
     #Raise Exception if the game agent name entered contains a space character.  
     if " " in game_agent_name:
         raise Exception("Game agent name cannot contain spaces.")
-          
+    
+    if "/" in game_agent_name:
+        raise Exception("Game agent name can not contain forward slashes.")
+
     if game_agent_name in [None, ""]:
         raise Exception("Invalid game agent name.")
 
